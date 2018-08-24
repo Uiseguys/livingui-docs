@@ -1,0 +1,21 @@
+cwc-navigation.hydrated {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0px;
+    width: inherit;
+    z-index: 300;
+    transition: height 0.25s ease-in-out;
+
+
+    .cwc-navigation-inner {
+        display: flex;
+        align-items: start;
+    }
+
+}
+
+.invisible {
+    display: none;
+}
