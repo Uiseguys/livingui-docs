@@ -17,6 +17,12 @@ export class StencilBsDemoPage {
 
   components = [
     {
+      componentName: 'input-page',
+      url: '/input',
+      title: 'Input Component (integrated)',
+      isHiden: false
+    },
+    {
       componentName: 'navbar-page',
       url: '/navbar',
       title: 'Navbar Component',

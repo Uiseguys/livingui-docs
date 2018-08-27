@@ -29,6 +29,10 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-autocomplete-select/dist',
       dest: 'autocomplete-select-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-input/dist',
+      dest: 'input-integration'
     }
   ],
   plugins: [sass()]
