@@ -81,7 +81,7 @@ export class InputPage {
         <pre>{this.usageStencil}</pre>
 
         <p>
-          Angular usage: <a href="http://stackblitz.com">Stackblitz demo</a>.
+          Angular usage: <a href="https://stackblitz.com/edit/livingui-cwc-input-demo">Stackblitz demo</a>.
         </p>
 
         <p>Vanilla html usage: </p>
