@@ -81,7 +81,7 @@ export class TextareaPage {
         <pre>{this.usageStencil}</pre>
 
         <p>
-          Angular usage: <a href="https://livingui-cwc-textarea-demo.stackblitz.io">Stackblitz demo</a>.
+          Angular usage: <a href="https://stackblitz.com/edit/livingui-cwc-textarea-demo">Stackblitz demo</a>.
         </p>
 
         <p>Vanilla html usage: </p>
