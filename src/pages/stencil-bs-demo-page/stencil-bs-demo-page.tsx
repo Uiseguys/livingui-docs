@@ -19,7 +19,13 @@ export class StencilBsDemoPage {
     {
       componentName: 'input-page',
       url: '/input',
-      title: 'Input Component (integrated)',
+      title: 'Input Component',
+      isHiden: false
+    },
+    {
+      componentName: 'textarea-page',
+      url: '/textarea',
+      title: 'Textarea Component',
       isHiden: false
     },
     {

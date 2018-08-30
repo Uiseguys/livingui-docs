@@ -33,6 +33,10 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-input/dist',
       dest: 'input-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-textarea/dist',
+      dest: 'textarea-integration'
     }
   ],
   plugins: [sass()]
