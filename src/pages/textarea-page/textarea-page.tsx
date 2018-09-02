@@ -1,29 +1,29 @@
 import { Component, Listen, State } from "@stencil/core";
 
 @Component({
-  tag: "input-page",
-  styleUrl: "input-page.scss"
+  tag: "textarea-page",
+  styleUrl: "textarea-page.scss"
 })
-export class InputPage {
+export class TextareaPage {
   @State()
-  inputResult: string = undefined;
+  textareaResult: string = undefined;
 
   @Listen("onvaluechange")
   customEventHandler(event: CustomEvent): void {
     console.log("Received the custom event: ", event);
-    this.inputResult = event.detail;
+    this.textareaResult = event.detail;
   }
 
   render() {
     return (
       <div class="container">
-        <h1>Input component</h1>
+        <h1>Textarea component</h1>
 
         <h2 class="mt-3">Overview</h2>
 
         <p>
-          <code>CwcInput</code> is a component to render simple bootstrap input
-          in your template.
+          <code>CwcTextarea</code> is a component to render simple bootstrap
+          textarea in your template.
         </p>
 
         <h2 class="mt-3">Props</h2>
@@ -46,7 +46,7 @@ export class InputPage {
                     <code>String</code>
                   </td>
                   <td><code>''</code></td>
-                  <td>Initial value of input</td>
+                  <td>Initial value of textarea</td>
                 </tr>
                 <tr>
                   <td>label</td>
@@ -54,7 +54,7 @@ export class InputPage {
                     <code>String</code>
                   </td>
                   <td><code>''</code></td>
-                  <td>Label of the input</td>
+                  <td>Label of the textarea</td>
                 </tr>
                 <tr>
                   <td>isRequired</td>
@@ -62,7 +62,7 @@ export class InputPage {
                     <code>boolean</code>
                   </td>
                   <td><code>false</code></td>
-                  <td>Is input required</td>
+                  <td>Is textarea required</td>
                 </tr>
                 <tr>
                   <td>isReadonly</td>
@@ -70,19 +70,21 @@ export class InputPage {
                     <code>boolean</code>
                   </td>
                   <td><code>false</code></td>
-                  <td>Is input read only</td>
+                  <td>Is textarea read only</td>
                 </tr>
-                <td>
-                  <code>onvaluechange</code>
-                </td>
-                <td>
-                  <code>CustomEvent</code>
-                </td>
-                <td><code>''</code></td>
-                <td>
-                  Value emited every input change and available in{" "}
-                  <code>`event.detail`</code> field.
+                <tr>
+                  <td>
+                    <code>onvaluechange</code>
                   </td>
+                  <td>
+                    <code>CustomEvent</code>
+                  </td>
+                  <td><code>''</code></td>
+                  <td>
+                    Value emited every textarea change and available in{" "}
+                    <code>`event.detail`</code> field.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -95,38 +97,40 @@ export class InputPage {
         <pre>{this.usageStencil}</pre>
 
         <p>
-          Angular usage: <a href="https://stackblitz.com/edit/livingui-cwc-input-demo">Stackblitz demo</a>.
+          Angular usage: <a href="https://stackblitz.com/edit/livingui-cwc-textarea-demo">Stackblitz demo</a>.
         </p>
 
         <p>Vanilla html usage: </p>
 
         <pre>{this.usageHtml}</pre>
 
-        <h2 class="mt-3">Input component demo</h2>
+        <h2 class="mt-3">Textarea component demo</h2>
 
-        <cwc-input label="Demo label" value={"My shiny value"} />
+        <cwc-textarea label="Demo label" value={"My shiny value"} />
 
-        {this.inputResult && (
-          <span class="mt-2">Catched event with data: {this.inputResult}</span>
+        {this.textareaResult && (
+          <span class="mt-2">
+            Catched event with data: {this.textareaResult}
+          </span>
         )}
       </div>
     );
   }
 
   usageStencil = `
-        <cwc-input label="Demo label" value={"My shiny value"} />
+        <cwc-textarea label="Demo label" value={"My shiny value"} />
         `;
   usageHtml = `
         <body>
-            <cwc-input>
+            <cwc-textarea>
 
-            </cwc-input>
+            </cwc-textarea>
             <ul class="output-target">
                 // Results available here.
             </ul>
 
             <script>
-                const cmp = document.querySelector('cwc-input')
+                const cmp = document.querySelector('cwc-textarea')
                 cmp.value = 'Shiny value'
                 cmp.label = 'Input label'
 
