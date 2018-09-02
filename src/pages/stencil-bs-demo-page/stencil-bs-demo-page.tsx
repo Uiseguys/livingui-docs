@@ -29,6 +29,11 @@ export class StencilBsDemoPage {
       isHiden: false
     },
     {
+      url: '/autocomplete-select',
+      title: 'AutocompleteSelect Component',
+      componentName: 'autocomplete-select-page'
+    },
+    {
       componentName: 'navbar-page',
       url: '/navbar',
       title: 'Navbar Component',
@@ -117,11 +122,6 @@ export class StencilBsDemoPage {
       url: '/multiselect',
       title: 'Multiselect Component',
       componentName: 'multiselect-page'
-    },
-    {
-      url: '/autocomplete-select',
-      title: 'AutocompleteSelect Component',
-      componentName: 'autocomplete-select-page'
     },
     {
       url: '/modal',
