@@ -45,7 +45,7 @@ export class InputPage {
                   <td>
                     <code>String</code>
                   </td>
-                  <td>''</td>
+                  <td><code>''</code></td>
                   <td>Initial value of input</td>
                 </tr>
                 <tr>
@@ -53,22 +53,36 @@ export class InputPage {
                   <td>
                     <code>String</code>
                   </td>
-                  <td>''</td>
-                  <td>Labal of the input</td>
+                  <td><code>''</code></td>
+                  <td>Label of the input</td>
                 </tr>
                 <tr>
+                  <td>isRequired</td>
                   <td>
-                    <code>onvaluechange</code>
+                    <code>boolean</code>
                   </td>
-                  <td>
-                    <code>CustomEvent</code>
-                  </td>
-                  <td>''</td>
-                  <td>
-                    Value emited every input change and available in{" "}
-                    <code>`event.detail`</code> field.
-                  </td>
+                  <td><code>false</code></td>
+                  <td>Is input required</td>
                 </tr>
+                <tr>
+                  <td>isReadonly</td>
+                  <td>
+                    <code>boolean</code>
+                  </td>
+                  <td><code>false</code></td>
+                  <td>Is input read only</td>
+                </tr>
+                <td>
+                  <code>onvaluechange</code>
+                </td>
+                <td>
+                  <code>CustomEvent</code>
+                </td>
+                <td><code>''</code></td>
+                <td>
+                  Value emited every input change and available in{" "}
+                  <code>`event.detail`</code> field.
+                  </td>
               </tbody>
             </table>
           </div>

@@ -45,7 +45,7 @@ export class TextareaPage {
                   <td>
                     <code>String</code>
                   </td>
-                  <td>''</td>
+                  <td><code>''</code></td>
                   <td>Initial value of textarea</td>
                 </tr>
                 <tr>
@@ -53,8 +53,24 @@ export class TextareaPage {
                   <td>
                     <code>String</code>
                   </td>
-                  <td>''</td>
-                  <td>Labal of the textarea</td>
+                  <td><code>''</code></td>
+                  <td>Label of the textarea</td>
+                </tr>
+                <tr>
+                  <td>isRequired</td>
+                  <td>
+                    <code>boolean</code>
+                  </td>
+                  <td><code>false</code></td>
+                  <td>Is textarea required</td>
+                </tr>
+                <tr>
+                  <td>isReadonly</td>
+                  <td>
+                    <code>boolean</code>
+                  </td>
+                  <td><code>false</code></td>
+                  <td>Is textarea read only</td>
                 </tr>
                 <tr>
                   <td>
@@ -63,7 +79,7 @@ export class TextareaPage {
                   <td>
                     <code>CustomEvent</code>
                   </td>
-                  <td>''</td>
+                  <td><code>''</code></td>
                   <td>
                     Value emited every textarea change and available in{" "}
                     <code>`event.detail`</code> field.
