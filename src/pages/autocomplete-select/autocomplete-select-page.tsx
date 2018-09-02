@@ -159,6 +159,12 @@ export class AutocompleteSelectPage {
                     </table>
                   </div>
                 </div>
+
+                <h3 >
+                  Angular usage
+                </h3>
+
+                <p>Please check out angular usage on <a href="https://stackblitz.com/edit/livingui-cwc-textarea-demo-gq6agd">Stackblitz</a>.</p>
               </div>
             </div>
           </div>
