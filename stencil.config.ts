@@ -37,6 +37,10 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-textarea/dist',
       dest: 'textarea-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-dropdown/dist',
+      dest: 'dropdown-integration'
     }
   ],
   plugins: [sass()]

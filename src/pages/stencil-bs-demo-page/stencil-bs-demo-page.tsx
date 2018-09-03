@@ -34,6 +34,11 @@ export class StencilBsDemoPage {
       title: 'AutocompleteSelect Component',
       componentName: 'autocomplete-select-page'
     },
+    {
+      url: '/dropdown',
+      title: 'Dropdown Component',
+      componentName: 'dropdown-page'
+    },
 
   ];
 
