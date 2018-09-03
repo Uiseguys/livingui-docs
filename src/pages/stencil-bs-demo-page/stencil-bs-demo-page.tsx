@@ -1,4 +1,4 @@
-import { Component, Prop, State, Listen } from '@stencil/core';
+import { Component, Prop, State } from '@stencil/core';
 import '@stencil/router';
 import 'bootstrap.native/dist/bootstrap-native-v4';
 
@@ -28,333 +28,146 @@ export class StencilBsDemoPage {
       title: 'Textarea Component',
       isHiden: false
     },
-    {
-      componentName: 'navbar-page',
-      url: '/navbar',
-      title: 'Navbar Component',
-      isHiden: true
-    },
-    {
-      componentName: 'navigation-page',
-      url: '/navigation',
-      title: 'Navigation Component'
-    },
-    {
-      componentName: 'dnd-page',
-      url: '/dnd',
-      title: 'DragAndDrop Component'
-    },
-    {
-      componentName: 'resolution-info-page',
-      url: '/resolution-info',
-      title: 'Resolution Info Component'
-    },
-    {
-      componentName: 'moment-page',
-      url: '/moment',
-      title: 'Moment Component'
-    },
-    {
-      url: '/collapse',
-      title: 'Collapse Component',
-      componentName: 'collapse-page',
-      isHiden: true
-    },
-    {
-      url: '/tooltip',
-      title: 'Tooltip Component',
-      componentName: 'tooltip-page',
-      isHiden: true
-    },
-    {
-      url: '/video',
-      title: 'Video Component',
-      componentName: 'video-player-page'
-    },
-    {
-      url: '/alert',
-      title: 'Alert Component',
-      componentName: 'alerts-page'
-    },
-    {
-      url: '/badge',
-      title: 'Badge Component',
-      componentName: 'badge-page'
-    },
-    {
-      url: '/breadcrumb',
-      title: 'Breadcrumb Component',
-      componentName: 'breadcrumb-page',
-      isHiden: true
-    },
-    {
-      url: '/dropdown',
-      title: 'Dropdown Component',
-      componentName: 'dropdown-page'
-    },
-    {
-      url: '/fclImage',
-      title: 'Fcl Image Component',
-      componentName: 'fcl-image-page'
-    },
-    {
-      url: '/form',
-      title: 'Form Component',
-      componentName: 'form-page',
-      isHiden: true
-    },
-    {
-      url: '/list',
-      title: 'List Component',
-      componentName: 'list-page'
-    },
-    {
-      url: '/list-infinite',
-      title: 'Infinite List Watcher Component',
-      componentName: 'infinite-list-page'
-    },
-    {
-      url: '/multiselect',
-      title: 'Multiselect Component',
-      componentName: 'multiselect-page'
-    },
+
     {
       url: '/autocomplete-select',
       title: 'AutocompleteSelect Component',
       componentName: 'autocomplete-select-page'
     },
     {
-      url: '/modal',
-      title: 'Modal Component',
-      componentName: 'modal-page'
+      url: '/dropdown',
+      title: 'Dropdown Component',
+      componentName: 'dropdown-page'
     },
-    {
-      url: '/tabs',
-      title: 'Tabs Component',
-      componentName: 'tabs-page',
-      isHiden: true
-    },
-    {
-      url: '/tag',
-      title: 'Tag Component',
-      componentName: 'tag-page'
-    },
-    {
-      url: '/markdown',
-      title: 'Markdown Component',
-      componentName: 'markdown-page'
-    },
-    {
-      url: '/progressbar',
-      title: 'Progress bar Component',
-      componentName: 'progress-bar-page'
-    },
-    {
-      url: '/typeahead',
-      title: 'Typeahead Component',
-      componentName: 'typeahead-page'
-    },
-    {
-      url: '/schedule',
-      title: 'Schedule Component',
-      componentName: 'schedule-page',
-      isHiden: true
-    },
-    {
-      url: '/slider',
-      title: 'Slider Component',
-      componentName: 'mwc-slider-page',
-      isHiden: true
-    },
-    {
-      url: '/avatar',
-      title: 'Avatar Component',
-      componentName: 'avatar-page'
-    },
-    {
-      url: '/sticky',
-      title: 'Sticky Component',
-      componentName: 'sticky-page',
-      isHiden: true
-    },
-    {
-      url: '/datepicker',
-      title: 'Datepicker Component',
-      componentName: 'datepicker-page'
-    },
-    {
-      url: '/inlineedit',
-      title: 'Inlineedit Component',
-      componentName: 'inlineedit-page'
-    },
-    {
-      url: '/inlineedit-textarea',
-      title: 'Inlineedit Textarea Component',
-      componentName: 'inlineedit-textarea-page'
-    },
-    {
-      url: '/fileinput',
-      title: 'Fileinput Component',
-      componentName: 'file-input-page'
-    },
-    {
-      url: '/popper',
-      title: 'Popper Component',
-      componentName: 'popper-page'
-    },
-    {
-      url: '/wysiwyg-editor',
-      title: 'Wysiwyg Editor Component',
-      componentName: 'wysiwyg-editor-page'
-    },
-    {
-      url: '/combobox',
-      title: 'Combobox Component',
-      componentName: 'combobox-page'
-    },
-    {
-      url: '/mycheckbox',
-      title: 'My Checkbox',
-      componentName: 'my-checkbox-page'
-    },
-    {
-      url: '/myswitch',
-      title: 'My Switch',
-      componentName: 'my-switch-page'
-    },
-    {
-      url: '/checkboxgroup',
-      title: 'Checkbox Group',
-      componentName: 'checkbox-group-page'
-    }
+
   ];
 
 
-  @Listen('shownavigationtoggle')
-  navToggleHandler(e: CustomEvent) {
+  // @Listen('shownavigationtoggle')
+  // navToggleHandler(e: CustomEvent) {
 
-    if (e.detail === this.navigationContainerNumber) {
-      this.navigationShown = false
-    } else {
-      this.navigationContainerNumber = e.detail
-      this.navigationShown = true
-    }
+  //   if (e.detail === this.navigationContainerNumber) {
+  //     this.navigationShown = false
+  //   } else {
+  //     this.navigationContainerNumber = e.detail
+  //     this.navigationShown = true
+  //   }
 
-    // this.navigationShown = !this.navigationShown
-  }
+  //   // this.navigationShown = !this.navigationShown
+  // }
 
 
-  @Listen('shownavigationcontainertoggle')
-  containerToggle() {
-    this.navContainerShown = !this.navContainerShown
-  }
-  @Listen('naviconstoggle')
-  iconsToggle() {
-    this.isIconsShown = !this.isIconsShown
-  }
-  @Listen('navigationcomponentnumber')
-  customEventHandler(event: CustomEvent) {
-    this.navigationContainerNumber = event.detail;
-  }
+  // @Listen('shownavigationcontainertoggle')
+  // containerToggle() {
+  //   this.navContainerShown = !this.navContainerShown
+  // }
+  // @Listen('naviconstoggle')
+  // iconsToggle() {
+  //   this.isIconsShown = !this.isIconsShown
+  // }
+  // @Listen('navigationcomponentnumber')
+  // customEventHandler(event: CustomEvent) {
+  //   this.navigationContainerNumber = event.detail;
+  // }
 
   render() {
 
 
 
     return [
-      (
-        this.navigationShown && this.navigationContainerNumber === 1 &&
+      // (
+      //   this.navigationShown && this.navigationContainerNumber === 1 &&
 
 
-        <cwc-navigation isCollapsed={this.navContainerShown}>
+      //   <cwc-navigation isCollapsed={this.navContainerShown}>
 
-          <div slot="primary-actions">
+      //     <div slot="primary-actions">
 
-            <cwc-navigation-global-item
-              titleText={'Title text'}
-              icon="./assets/icon/sharp_send_white_48dp.png" />
-            <cwc-navigation-global-item
-              titleText={'Title text'}
-              icon="./assets/icon/sharp_check_circle_outline_white_18dp.png" />
-            <cwc-navigation-global-item isActive={true}
-              titleText={'Title text'}
-              icon="./assets/icon/baseline_add_white_18dp.png" />
+      //       <cwc-navigation-global-item
+      //         titleText={'Title text'}
+      //         icon="./assets/icon/sharp_send_white_48dp.png" />
+      //       <cwc-navigation-global-item
+      //         titleText={'Title text'}
+      //         icon="./assets/icon/sharp_check_circle_outline_white_18dp.png" />
+      //       <cwc-navigation-global-item isActive={true}
+      //         titleText={'Title text'}
+      //         icon="./assets/icon/baseline_add_white_18dp.png" />
 
-          </div>
-
-
-          <div slot="secondary-actions">
-            <cwc-navigation-global-item
-              titleText={'Secondary action'}
-              icon="./assets/icon/sharp_send_white_48dp.png" />
-          </div>
+      //     </div>
 
 
-          <div slot="container-actions">
-            <navigation-title text="Nav Title"
-              icon="./assets/icon/sharp_flip_to_front_white_18dp.png" />
+      //     <div slot="secondary-actions">
+      //       <cwc-navigation-global-item
+      //         titleText={'Secondary action'}
+      //         icon="./assets/icon/sharp_send_white_48dp.png" />
+      //     </div>
 
 
-            <navigation-item-group text="Actions group">
-
-              <div slot="navigation-items">
-
-                <navigation-item showIcon={this.isIconsShown} text="Navigation item" />
-                <navigation-item showIcon={this.isIconsShown} isActive={true} text={'Active nav item with subtext'}
-                  subText="Subtext of nav item" />
-                <navigation-item showIcon={this.isIconsShown} text="Basic link" />
-
-                <navigation-item showIcon={this.isIconsShown} text="With drop icon"
-                  dropIcon="./assets/icon/sharp_flip_to_front_white_18dp.png" />
-
-              </div>
-            </navigation-item-group>
-
-            <navigation-item-group text="Group with separator" hasSeparator={true}>
-
-              <div slot="navigation-items">
-                <navigation-item showIcon={this.isIconsShown} text="With dropicon and subasdfastext"
-                  subText="My small subtext"
-                  icon={'./assets/icon/baseline_add_white_18dp.png'}
-                  dropIcon={'./assets/icon/sharp_flip_to_front_white_18dp.png'} />
-
-                <navigation-item showIcon={this.isIconsShown} text="With dropicon and subtext"
-                  subText="My small subtext"
-                  icon={'./assets/icon/baseline_add_white_18dp.png'}
-                  dropIcon={'./assets/icon/sharp_flip_to_front_white_18dp.png'} />
-
-                <navigation-item showIcon={this.isIconsShown} text="With mouse events" />
-              </div>
-            </navigation-item-group>
-
-          </div>
-
-        </cwc-navigation>
-
-      ),
-      (
-        this.navigationShown && this.navigationContainerNumber === 2 &&
+      //     <div slot="container-actions">
+      //       <navigation-title text="Nav Title"
+      //         icon="./assets/icon/sharp_flip_to_front_white_18dp.png" />
 
 
-        <cwc-navigation isCollapsed={true}>
+      //       <navigation-item-group text="Actions group">
 
-          <div slot="primary-actions">
+      //         <div slot="navigation-items">
 
-            <h3><span class="badge badge-primary">St</span></h3>
-            <h3><span class="badge badge-info">St</span></h3>
-            <h3><span class="badge badge-secondary">St</span></h3>
+      //           <navigation-item showIcon={this.isIconsShown} text="Navigation item" />
+      //           <navigation-item showIcon={this.isIconsShown} isActive={true} text={'Active nav item with subtext'}
+      //             subText="Subtext of nav item" />
+      //           <navigation-item showIcon={this.isIconsShown} text="Basic link" />
 
-          </div>
+      //           <navigation-item showIcon={this.isIconsShown} text="With drop icon"
+      //             dropIcon="./assets/icon/sharp_flip_to_front_white_18dp.png" />
+
+      //         </div>
+      //       </navigation-item-group>
+
+      //       <navigation-item-group text="Group with separator" hasSeparator={true}>
+
+      //         <div slot="navigation-items">
+      //           <navigation-item showIcon={this.isIconsShown} text="With dropicon and subasdfastext"
+      //             subText="My small subtext"
+      //             icon={'./assets/icon/baseline_add_white_18dp.png'}
+      //             dropIcon={'./assets/icon/sharp_flip_to_front_white_18dp.png'} />
+
+      //           <navigation-item showIcon={this.isIconsShown} text="With dropicon and subtext"
+      //             subText="My small subtext"
+      //             icon={'./assets/icon/baseline_add_white_18dp.png'}
+      //             dropIcon={'./assets/icon/sharp_flip_to_front_white_18dp.png'} />
+
+      //           <navigation-item showIcon={this.isIconsShown} text="With mouse events" />
+      //         </div>
+      //       </navigation-item-group>
+
+      //     </div>
+
+      //   </cwc-navigation>
+
+      // ),
+      // (
+      //   this.navigationShown && this.navigationContainerNumber === 2 &&
 
 
-          <div slot="secondary-actions">
-            <cwc-avatar name='John Do' size={42} rounded > </cwc-avatar>
-          </div>
+      //   <cwc-navigation isCollapsed={true}>
+
+      //     <div slot="primary-actions">
+
+      //       <h3><span class="badge badge-primary">St</span></h3>
+      //       <h3><span class="badge badge-info">St</span></h3>
+      //       <h3><span class="badge badge-secondary">St</span></h3>
+
+      //     </div>
 
 
-        </cwc-navigation>
+      //     <div slot="secondary-actions">
+      //       <cwc-avatar name='John Do' size={42} rounded > </cwc-avatar>
+      //     </div>
 
-      ),
+
+      //   </cwc-navigation>
+
+      // ),
       <cwc-styles />,
       <div class={`container-fluid ${this.navigationShown ? 'with-navigation' : ''}`}>
         <div class="row">
