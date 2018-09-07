@@ -44,6 +44,11 @@ export class StencilBsDemoPage {
       title: 'Video Component',
       componentName: 'video-player-page'
     },
+    {
+      url: '/inlineedit',
+      title: 'Inlineedit Component',
+      componentName: 'inlineedit-page'
+    },
 
   ];
 
