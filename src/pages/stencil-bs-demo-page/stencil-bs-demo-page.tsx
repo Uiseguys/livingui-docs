@@ -39,6 +39,11 @@ export class StencilBsDemoPage {
       title: 'Dropdown Component',
       componentName: 'dropdown-page'
     },
+    {
+      url: '/video',
+      title: 'Video Component',
+      componentName: 'video-player-page'
+    },
 
   ];
 
