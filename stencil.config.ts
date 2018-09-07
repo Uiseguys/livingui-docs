@@ -49,6 +49,10 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-inlineedit/dist',
       dest: 'inlineedit-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-inlineedit-textarea/dist',
+      dest: 'inlineedit-textarea-integration'
     }
   ],
   plugins: [sass()]

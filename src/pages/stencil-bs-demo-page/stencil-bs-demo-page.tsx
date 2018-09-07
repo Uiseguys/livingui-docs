@@ -49,6 +49,11 @@ export class StencilBsDemoPage {
       title: 'Inlineedit Component',
       componentName: 'inlineedit-page'
     },
+    {
+      url: '/inlineedit-textarea',
+      title: 'Inlineedit textarea Component',
+      componentName: 'inlineedit-textarea-page'
+    },
 
   ];
 
