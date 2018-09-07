@@ -41,6 +41,10 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-dropdown/dist',
       dest: 'dropdown-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-video/dist',
+      dest: 'video-integration'
     }
   ],
   plugins: [sass()]
