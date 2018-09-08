@@ -58,6 +58,10 @@ export const config: Config = {
       src: '../node_modules/@livingui/cwc-moment/dist',
       dest: 'moment-integration'
     },
+    {
+      src: '../node_modules/@livingui/cwc-dnd/dist',
+      dest: 'dnd-integration'
+    },
   ],
   plugins: [sass()]
 };

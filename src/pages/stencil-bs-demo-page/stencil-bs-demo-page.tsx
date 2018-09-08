@@ -58,6 +58,11 @@ export class StencilBsDemoPage {
       title: 'Moment Component',
       componentName: 'moment-page'
     },
+    {
+      url: '/dnd',
+      title: 'Drag and Drop Component',
+      componentName: 'dnd-page'
+    },
 
 
 

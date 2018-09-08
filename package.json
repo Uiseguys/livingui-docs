@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@livingui/cwc-autocomplete-select": "^0.1.0",
+    "@livingui/cwc-dnd": "^0.1.0",
     "@livingui/cwc-dropdown": "^0.1.0",
     "@livingui/cwc-inlineedit": "^0.1.0",
     "@livingui/cwc-inlineedit-textarea": "^0.1.0",
