@@ -28,7 +28,6 @@ export class StencilBsDemoPage {
       title: 'Textarea Component',
       isHiden: false
     },
-
     {
       url: '/autocomplete-select',
       title: 'AutocompleteSelect Component',
@@ -54,6 +53,13 @@ export class StencilBsDemoPage {
       title: 'Inlineedit textarea Component',
       componentName: 'inlineedit-textarea-page'
     },
+    {
+      url: '/moment',
+      title: 'Moment Component',
+      componentName: 'moment-page'
+    },
+
+
 
   ];
 

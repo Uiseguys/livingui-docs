@@ -53,7 +53,11 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-inlineedit-textarea/dist',
       dest: 'inlineedit-textarea-integration'
-    }
+    },
+    {
+      src: '../node_modules/@livingui/cwc-moment/dist',
+      dest: 'moment-integration'
+    },
   ],
   plugins: [sass()]
 };
