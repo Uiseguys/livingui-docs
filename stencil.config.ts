@@ -62,6 +62,10 @@ export const config: Config = {
       src: '../node_modules/@livingui/cwc-dnd/dist',
       dest: 'dnd-integration'
     },
+    {
+      src: '../node_modules/@livingui/cwc-resolution-info/dist',
+      dest: 'resolution-info-integration'
+    },
   ],
   plugins: [sass()]
 };

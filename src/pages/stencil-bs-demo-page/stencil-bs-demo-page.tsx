@@ -63,6 +63,11 @@ export class StencilBsDemoPage {
       title: 'Drag and Drop Component',
       componentName: 'dnd-page'
     },
+    {
+      url: '/resolution-info',
+      title: 'Resolution info Component',
+      componentName: 'resolution-info-page'
+    },
 
 
 
