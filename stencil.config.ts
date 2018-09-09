@@ -66,6 +66,10 @@ export const config: Config = {
       src: '../node_modules/@livingui/cwc-resolution-info/dist',
       dest: 'resolution-info-integration'
     },
+    {
+      src: '../node_modules/@livingui/cwc-datepicker/dist',
+      dest: 'datepicker-integration'
+    },
   ],
   plugins: [sass()]
 };

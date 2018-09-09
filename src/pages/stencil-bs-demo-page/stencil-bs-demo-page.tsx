@@ -68,6 +68,11 @@ export class StencilBsDemoPage {
       title: 'Resolution info Component',
       componentName: 'resolution-info-page'
     },
+    {
+      url: '/datepicker',
+      title: 'Datepicker Component',
+      componentName: 'datepicker-page'
+    },
 
 
 
