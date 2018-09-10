@@ -28,7 +28,6 @@ export class StencilBsDemoPage {
       title: 'Textarea Component',
       isHiden: false
     },
-
     {
       url: '/autocomplete-select',
       title: 'AutocompleteSelect Component',
@@ -44,6 +43,44 @@ export class StencilBsDemoPage {
       title: 'Video Component',
       componentName: 'video-player-page'
     },
+    {
+      url: '/inlineedit',
+      title: 'Inlineedit Component',
+      componentName: 'inlineedit-page'
+    },
+    {
+      url: '/inlineedit-textarea',
+      title: 'Inlineedit textarea Component',
+      componentName: 'inlineedit-textarea-page'
+    },
+    {
+      url: '/moment',
+      title: 'Moment Component',
+      componentName: 'moment-page'
+    },
+    {
+      url: '/dnd',
+      title: 'Drag and Drop Component',
+      componentName: 'dnd-page'
+    },
+    {
+      url: '/resolution-info',
+      title: 'Resolution info Component',
+      componentName: 'resolution-info-page'
+    },
+    {
+      url: '/datepicker',
+      title: 'Datepicker Component',
+      componentName: 'datepicker-page'
+    },
+
+    {
+      url: '/switch',
+      title: 'Switch Component',
+      componentName: 'my-switch-page'
+    },
+
+
 
   ];
 

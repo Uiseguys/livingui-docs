@@ -45,7 +45,35 @@ export const config: Config = {
     {
       src: '../node_modules/@livingui/cwc-video/dist',
       dest: 'video-integration'
-    }
+    },
+    {
+      src: '../node_modules/@livingui/cwc-inlineedit/dist',
+      dest: 'inlineedit-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-inlineedit-textarea/dist',
+      dest: 'inlineedit-textarea-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-moment/dist',
+      dest: 'moment-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-dnd/dist',
+      dest: 'dnd-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-resolution-info/dist',
+      dest: 'resolution-info-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-datepicker/dist',
+      dest: 'datepicker-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-switch/dist',
+      dest: 'switch-integration'
+    },
   ],
   plugins: [sass()]
 };
