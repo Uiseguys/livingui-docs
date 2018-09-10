@@ -70,6 +70,10 @@ export const config: Config = {
       src: '../node_modules/@livingui/cwc-datepicker/dist',
       dest: 'datepicker-integration'
     },
+    {
+      src: '../node_modules/@livingui/cwc-switch/dist',
+      dest: 'switch-integration'
+    },
   ],
   plugins: [sass()]
 };

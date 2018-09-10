@@ -74,6 +74,12 @@ export class StencilBsDemoPage {
       componentName: 'datepicker-page'
     },
 
+    {
+      url: '/switch',
+      title: 'Switch Component',
+      componentName: 'my-switch-page'
+    },
+
 
 
   ];
