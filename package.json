@@ -1,7 +1,7 @@
 {
   "name": "@ui-guys/livingui-docs",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Bootstrap componentes built with StencilJS",
   "engines": {
     "node": ">=6.11.0 <9.0"
