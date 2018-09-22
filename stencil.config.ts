@@ -27,12 +27,16 @@ export const config: Config = {
     //   dest: 'popper-integration'
     // },
     {
-      src: '../node_modules/@livingui/cwc-autocomplete-select/dist',
-      dest: 'autocomplete-select-integration'
+      src: '../node_modules/@livingui/cwc-form-generator/dist',
+      dest: 'form-generator-integration'
     },
     {
-      src: '../node_modules/@livingui/cwc-input/dist',
-      dest: 'input-integration'
+      src: '../node_modules/@livingui/cwc-inlineedit/dist',
+      dest: 'inlineedit-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-inlineedit-textarea/dist',
+      dest: 'inlineedit-textarea-integration'
     },
     {
       src: '../node_modules/@livingui/cwc-textarea/dist',
@@ -43,16 +47,24 @@ export const config: Config = {
       dest: 'dropdown-integration'
     },
     {
+      src: '../node_modules/@livingui/cwc-select/dist',
+      dest: 'select-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-datepicker/dist',
+      dest: 'datepicker-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-autocomplete-select/dist',
+      dest: 'autocomplete-select-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-input/dist',
+      dest: 'input-integration'
+    },
+    {
       src: '../node_modules/@livingui/cwc-video/dist',
       dest: 'video-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-inlineedit/dist',
-      dest: 'inlineedit-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-inlineedit-textarea/dist',
-      dest: 'inlineedit-textarea-integration'
     },
     {
       src: '../node_modules/@livingui/cwc-moment/dist',
@@ -67,13 +79,9 @@ export const config: Config = {
       dest: 'resolution-info-integration'
     },
     {
-      src: '../node_modules/@livingui/cwc-datepicker/dist',
-      dest: 'datepicker-integration'
-    },
-    {
       src: '../node_modules/@livingui/cwc-switch/dist',
       dest: 'switch-integration'
-    },
+    }
   ],
   plugins: [sass()]
 };
