@@ -1,6 +1,11 @@
 import { Component, Listen, State, Element } from '@stencil/core';
 // import template from 'lodash/template'
 
+const enum Framework {
+  "angular",
+  "stencil"
+}
+
 @Component({
   tag: "dnd-page",
   styleUrl: "dnd-page.scss"
@@ -21,7 +26,7 @@ export class DndPage {
   //   console.log("Received the custom event: ", event);
   // }
 
-  @Listen('dndmodelupdate') 
+  @Listen('dndmodelupdate')
     dndModelUpdateHandler(event: CustomEvent) {
       console.log('got model change: ', event.detail)
       this.dataModel = JSON.stringify(event.detail, null, 4)
@@ -55,7 +60,7 @@ export class DndPage {
 
                   <p class="mt-1 my-0">
                     To instantiate one or more draggable list columns please
-                    provide them right into <code>&lt;cwc-dnd&gt;&lt;/cwc-dnd&gt;</code> component. 
+                    provide them right into <code>&lt;cwc-dnd&gt;&lt;/cwc-dnd&gt;</code> component.
                     Also you must pass array of selectors of this
                     lists with <code>rows: string[]</code> property. Also you
                     can declare a <code>handleClass: string</code> property
@@ -289,11 +294,11 @@ export class DndPage {
                 <div class="usage-block col-12">
                   <div class="col-12 mt-1">
                     <h4>Usage with specified handler and model tracking</h4>
-                    <p>You can specify class for dedicated handler element with <code>handleClass</code> property. 
-                    In the next example we had added a child element with text "Drag me!" and <code>handle</code> class. 
+                    <p>You can specify class for dedicated handler element with <code>handleClass</code> property.
+                    In the next example we had added a child element with text "Drag me!" and <code>handle</code> class.
                     Also we specifieed <code>handleClass="handler"</code> property in drag and drop component. </p>
-                    <p>For model tracking we are listening to the <code>dndmodelupdate</code> event 
-                    which is emitted every time draggable elements order is changed. Every draggable element you want to track must 
+                    <p>For model tracking we are listening to the <code>dndmodelupdate</code> event
+                    which is emitted every time draggable elements order is changed. Every draggable element you want to track must
                     have <code>data-dnd</code> attribute which value will be emited in the event.</p>
 
                     <div class="buttons-wrapper my-2">
@@ -594,11 +599,11 @@ export class DndPage {
                           <pre id="model-data-target">
 
                           {
-                            this.dataModel ? this.dataModel : <p>Please drag one of elements above to check data model</p> 
+                            this.dataModel ? this.dataModel : <p>Please drag one of elements above to check data model</p>
                           }
 
                           </pre>
-                    
+
                     </div>
                   </div>
                 </div>
@@ -840,9 +845,4 @@ export class DndPage {
       </div>
     ];
   }
-}
-
-export enum Framework {
-  "angular",
-  "stencil"
 }
