@@ -17,6 +17,12 @@ export class StencilBsDemoPage {
 
   components = [
     {
+      componentName: 'form-generator-doc-page',
+      url: '/form-generator',
+      title: 'Form Generator Component',
+      isHiden: false
+    },
+    {
       componentName: 'input-page',
       url: '/input',
       title: 'Input Component',
