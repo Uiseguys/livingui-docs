@@ -279,6 +279,16 @@ export class FormGeneratorDocPage {
                 </i>
               </li>
             </ul>
+
+            <h3>Schema Object:</h3>
+            <p>The following Schema Object is used for this example:</p>
+            <p><pre>{JSON.stringify(this.schema, null, 5)}</pre></p>
+
+            <h3>Form Object:</h3>
+            <p>The actual form object that respects the schema.</p>
+            <p>The inputs can have predefined values or be empty and filled in by the user or dynamicly within the code.</p>
+            <p>The following Form Object is used for this example:</p>
+            <p><pre>{JSON.stringify(this.form, null, 5)}</pre></p>
           </div>
         </div>
       </div>
