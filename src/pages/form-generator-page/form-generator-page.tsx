@@ -18,43 +18,56 @@ export class FormGeneratorDocPage {
           "$id": "data/properties/checkbox",
           "type": "boolean",
           "title": "Checkbox",
-          "description": "Check Me"
+          "description": "Check Me",
+          "groupTitle": "General",
+          "order": 1
         },
         "title": {
           "$id": "data/properties/title",
           "type": "string",
           "title": "Title",
-          "description": "Please provide a title for this"
+          "description": "Please provide a title for this",
+          "order": 2
         },
         "authorFirstName": {
           "$id": "data/properties/authorFirstName",
           "type": "string",
           "title": "First Name",
-          "description": "Please provide your first name"
+          "description": "Please provide your first name",
+          "groupTitle": "General",
+          "order": 3
         },
         "authorLastName": {
           "$id": "data/properties/authorLastName",
           "type": "string",
           "title": "Last Name",
-          "description": "Please provide your last name"
+          "description": "Please provide your last name",
+          "groupTitle": "General",
+          "order": 4
         },
         "description": {
           "$id": "data/properties/description",
           "type": "string",
           "title": "Description",
-          "description": "Please provide a long description"
+          "description": "Please provide a long description",
+          "groupTitle": "General",
+          "order": 5
         },
         "textarea": {
           "$id": "data/properties/textarea",
           "type": "string",
           "title": "Textarea Description",
           "description": "Textarea Description",
+          "groupTitle": "Basic Information",
+          "order": 4
         },
         "select": {
           "$id": "data/properties/select",
           "type": "string",
           "title": "Select",
           "description": "Select Description",
+          "groupTitle": "Basic Information",
+          "order": 3,
           "enum": ["Automatic", "Manual"]
         },
         "autocomplete": {
@@ -62,6 +75,8 @@ export class FormGeneratorDocPage {
           "type": "array",
           "title": "Autocomplete",
           "description": "Autocomplete Decription",
+          "groupTitle": "Basic Information",
+          "order": 2,
           "items": {
             "$id": "/properties/autocomplete/items",
             "type": "object",
@@ -95,6 +110,8 @@ export class FormGeneratorDocPage {
           "type": "array",
           "title": "Vegetables",
           "description": "Vegetables Decription",
+          "groupTitle": "Basic Information",
+          "order": 1,
           "items": { "$ref": "#/definitions/veggie" }
         }
       },
@@ -173,8 +190,8 @@ export class FormGeneratorDocPage {
               <div class="row">
                 <div class="col-lg-12">
                   <pre><code>
-                      &lt;form-generator schema=&#123;this.schema&#125; value=&#123;this.form&#125;&gt;<br />
-                        &#9;&lt;checkbox-generator for="boolean"&gt;&lt;/checkbox-generator&gt;<br />
+                      &lt;cwc-form-generator schema=&#123;this.schema&#125; value=&#123;this.form&#125;&gt;<br />
+                        &#9;&lt;cwc-switch for="boolean"&gt;&lt;/cwc-switch&gt;<br />
                         &#9;&lt;cwc-inlineedit for="string"&gt;&lt;/cwc-inlineedit&gt;<br />
                         &#9;&lt;cwc-inlineedit-textarea for="data/properties/description"&gt;&lt;/cwc-inlineedit&gt;<br />
                         &#9;&lt;cwc-textarea for="data/properties/textarea"&gt;&lt;/cwc-textarea&gt;<br />
@@ -187,20 +204,20 @@ export class FormGeneratorDocPage {
                           &#9;&#9;for="data/properties/vegetables"<br />
                           &#9;&#9;props=&#123;this.vegetablesProps&#125;<br />
                         &#9;&gt;&lt;/cwc-autocomplete-select&gt;<br />
-                      &lt;/form-generator&gt;
+                      &lt;/cwc-form-generator&gt;
                   </code></pre>
 
                   <hr />
                   <h3>Outputs:</h3><br/>
-                  <form-generator schema={this.schema} value={this.form}>
-                    <checkbox-generator for="boolean" />
+                  <cwc-form-generator schema={this.schema} value={this.form}>
+                    <cwc-switch for="boolean" />
                     <cwc-inlineedit for="string" />
                     <cwc-inlineedit-textarea for="data/properties/description" />
                     <cwc-textarea for="data/properties/textarea" />
                     <cwc-select for="data/properties/select" />
                     <cwc-autocomplete-select for="array" props={this.autocompleteProps} />
                     <cwc-autocomplete-select for="data/properties/vegetables" props={this.vegetablesProps} />
-                  </form-generator>
+                  </cwc-form-generator>
                   <hr />
                 </div>
               </div>
@@ -242,7 +259,7 @@ export class FormGeneratorDocPage {
             <p>The Form Generator will generate a form, based on a given Json Schema, using the following components:</p>
             <ul>
               <li>
-                <code>&#9;&lt;checkbox-generator for="boolean"&gt;&lt;/checkbox-generator&gt;</code><br />
+                <code>&#9;&lt;cwc-switch for="boolean"&gt;&lt;/cwc-switch&gt;</code><br />
                 <small><i>Will generate an input type checkbox. Used for type boolean schema prop.</i></small>
               </li>
               <li>
