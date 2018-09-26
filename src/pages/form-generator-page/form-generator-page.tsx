@@ -4,6 +4,7 @@ import { Component, State } from '@stencil/core';
     tag: 'form-generator-doc-page',
 })
 export class FormGeneratorDocPage {
+  selectProps: any;
   autocompleteProps: any;
   vegetablesProps: any;
 
@@ -166,6 +167,11 @@ export class FormGeneratorDocPage {
       ]
     };
 
+    this.selectProps = JSON.stringify({
+      asCombobox: false,
+      btnLeftPosition: false,
+      readonly: false
+    });
     this.autocompleteProps = JSON.stringify({
       searchKey: "data.name"
     });
@@ -195,7 +201,10 @@ export class FormGeneratorDocPage {
                         &#9;&lt;cwc-inlineedit for="string"&gt;&lt;/cwc-inlineedit&gt;<br />
                         &#9;&lt;cwc-inlineedit-textarea for="data/properties/description"&gt;&lt;/cwc-inlineedit&gt;<br />
                         &#9;&lt;cwc-textarea for="data/properties/textarea"&gt;&lt;/cwc-textarea&gt;<br />
-                        &#9;&lt;cwc-select for="data/properties/select"&gt;&lt;/cwc-select&gt;<br />
+                        &#9;&lt;cwc-select<br />
+                          &#9;&#9;for="data/properties/select"<br />
+                          &#9;&#9;props=&#123;this.selectProps&#125;<br />
+                        &#9;&gt;&lt;/cwc-select&gt;<br />
                         &#9;&lt;cwc-autocomplete-select<br />
                           &#9;&#9;for="array"<br />
                           &#9;&#9;props=&#123;this.autocompleteProps&#125;<br />
@@ -214,7 +223,7 @@ export class FormGeneratorDocPage {
                     <cwc-inlineedit for="string" />
                     <cwc-inlineedit-textarea for="data/properties/description" />
                     <cwc-textarea for="data/properties/textarea" />
-                    <cwc-select for="data/properties/select" />
+                    <cwc-select for="data/properties/select" props={this.selectProps} />
                     <cwc-autocomplete-select for="array" props={this.autocompleteProps} />
                     <cwc-autocomplete-select for="data/properties/vegetables" props={this.vegetablesProps} />
                   </cwc-form-generator>
@@ -275,8 +284,23 @@ export class FormGeneratorDocPage {
                 <small><i>Will generate a textarea element. Used for type string schema prop.</i></small>
               </li>
               <li>
-                <code>&#9;&lt;cwc-select for="string"&gt;&lt;/cwc-select&gt;</code><br />
-                <small><i>Will generate a select element. Used for type string schema prop  with enum array property.</i></small>
+                <code>
+                  &#9;&lt;cwc-select
+                    &#9;&#9;for="string"
+                    &#9;&#9;props=&#123;this.selectProps&#125;
+                  &#9;&gt;&lt;/cwc-select&gt;
+                </code><br />
+                <small><i>Will generate a select element. Used for type string schema prop with enum array property.</i></small><br />
+                <small><i>It can be passed a JSON.stringifiy() object to the props attribute.</i></small><br />
+                <small><i>
+                  <code>
+                    const selectProps = JSON.stringify(&#123;
+                      &#9;asCombobox: boolean,
+                      &#9;btnLeftPosition: boolean,
+                      &#9;readonly: boolean
+                    &#125;);
+                  </code>
+                </i></small>
               </li>
               <li>
                 <code>
@@ -285,15 +309,15 @@ export class FormGeneratorDocPage {
                     &#9;&#9;props=&#123;this.autocompleteProps&#125;
                   &#9;&gt;&lt;/cwc-autocomplete-select&gt;
                 </code><br />
-                <i>Will generate an autocomplete dropdown select element. Used for type array schema prop.</i><br />
-                <i>It must be passed a JSON.stringifiy() object to the props attribute.</i><br />
-                <i>
+                <small><i>Will generate an autocomplete dropdown select element. Used for type array schema prop.</i></small><br />
+                <small><i>It must be passed a JSON.stringifiy() object to the props attribute.</i></small><br />
+                <small><i>
                   <code>
                     const autocompleteProps = JSON.stringify(&#123;
                       &#9;searchKey: "data.name"
                     &#125;);
                   </code>
-                </i>
+                </i></small>
               </li>
             </ul>
 
