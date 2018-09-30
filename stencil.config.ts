@@ -63,6 +63,10 @@ export const config: Config = {
       dest: 'input-integration'
     },
     {
+      src: '../node_modules/@livingui/cwc-number-input/dist',
+      dest: 'number-input-integration'
+    },
+    {
       src: '../node_modules/@livingui/cwc-video/dist',
       dest: 'video-integration'
     },

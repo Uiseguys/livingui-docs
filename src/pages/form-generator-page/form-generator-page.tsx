@@ -20,56 +20,76 @@ export class FormGeneratorDocPage {
           "type": "boolean",
           "title": "Checkbox",
           "description": "Check Me",
+          'readonly': true,
           "groupTitle": "General",
-          "order": 1
+          "order": 1,
+          "default": null
         },
         "title": {
           "$id": "data/properties/title",
           "type": "string",
           "title": "Title",
           "description": "Please provide a title for this",
-          "order": 2
+          'readonly': true,
+          "order": 2,
+          "default": null
         },
         "authorFirstName": {
           "$id": "data/properties/authorFirstName",
           "type": "string",
           "title": "First Name",
           "description": "Please provide your first name",
+          'readonly': true,
           "groupTitle": "General",
-          "order": 3
+          "order": 3,
+          "default": null
         },
         "authorLastName": {
           "$id": "data/properties/authorLastName",
           "type": "string",
           "title": "Last Name",
           "description": "Please provide your last name",
+          'readonly': true,
           "groupTitle": "General",
-          "order": 4
+          "order": 4,
+          "default": null
         },
         "description": {
           "$id": "data/properties/description",
           "type": "string",
           "title": "Description",
           "description": "Please provide a long description",
+          'readonly': true,
           "groupTitle": "General",
-          "order": 5
+          "order": 5,
+          "default": null
         },
         "textarea": {
           "$id": "data/properties/textarea",
           "type": "string",
           "title": "Textarea Description",
           "description": "Textarea Description",
+          'readonly': true,
           "groupTitle": "Basic Information",
-          "order": 4
+          "order": 4,
+          "default": null
         },
         "select": {
           "$id": "data/properties/select",
           "type": "string",
           "title": "Select",
           "description": "Select Description",
+          'readonly': true,
           "groupTitle": "Basic Information",
           "order": 3,
-          "enum": ["Automatic", "Manual"]
+          "enum": ["Automatic", "Manual"],
+          "default": null
+        },
+        'numberInput': {
+            '$id': '/properties/numberInput',
+            'title': 'Number Input',
+            'type': 'number',
+            'default': 10
         },
         "autocomplete": {
           "$id": "data/properties/autocomplete",
@@ -104,7 +124,8 @@ export class FormGeneratorDocPage {
                 }
               }
             ]
-          }
+          },
+          "default": null
         },
         "vegetables": {
           "$id": "data/properties/vegetables",
@@ -113,7 +134,8 @@ export class FormGeneratorDocPage {
           "description": "Vegetables Decription",
           "groupTitle": "Basic Information",
           "order": 1,
-          "items": { "$ref": "#/definitions/veggie" }
+          "items": { "$ref": "#/definitions/veggie" },
+          "default": null
         }
       },
       "required": [
@@ -124,6 +146,7 @@ export class FormGeneratorDocPage {
         "description",
         "textarea",
         "select",
+        "numberInput",
         "autocomplete",
         "vegetables"
       ],
@@ -154,6 +177,7 @@ export class FormGeneratorDocPage {
       "description": "Lorem ipsum",
       "textarea": "Lorem ipsum",
       "select": "Select",
+      "numberInput": null,
       "autocomplete": [],
       "vegetables": [
         {
@@ -169,8 +193,7 @@ export class FormGeneratorDocPage {
 
     this.selectProps = JSON.stringify({
       asCombobox: false,
-      btnLeftPosition: false,
-      readonly: false
+      btnLeftPosition: false
     });
     this.autocompleteProps = JSON.stringify({
       searchKey: "data.name"
@@ -199,12 +222,13 @@ export class FormGeneratorDocPage {
                       &lt;cwc-form-generator schema=&#123;this.schema&#125; value=&#123;this.form&#125;&gt;<br />
                         &#9;&lt;cwc-switch for="boolean"&gt;&lt;/cwc-switch&gt;<br />
                         &#9;&lt;cwc-inlineedit for="string"&gt;&lt;/cwc-inlineedit&gt;<br />
-                        &#9;&lt;cwc-inlineedit-textarea for="data/properties/description"&gt;&lt;/cwc-inlineedit&gt;<br />
+                        &#9;&lt;cwc-inlineedit-textarea for="data/properties/description"&gt;&lt;/cwc-inlineedit-textarea&gt;<br />
                         &#9;&lt;cwc-textarea for="data/properties/textarea"&gt;&lt;/cwc-textarea&gt;<br />
                         &#9;&lt;cwc-select<br />
                           &#9;&#9;for="data/properties/select"<br />
                           &#9;&#9;props=&#123;this.selectProps&#125;<br />
                         &#9;&gt;&lt;/cwc-select&gt;<br />
+                        &#9;&lt;cwc-number-input for="number"&gt;&lt;/cwc-number-input&gt;<br />
                         &#9;&lt;cwc-autocomplete-select<br />
                           &#9;&#9;for="array"<br />
                           &#9;&#9;props=&#123;this.autocompleteProps&#125;<br />
@@ -224,6 +248,7 @@ export class FormGeneratorDocPage {
                     <cwc-inlineedit-textarea for="data/properties/description" />
                     <cwc-textarea for="data/properties/textarea" />
                     <cwc-select for="data/properties/select" props={this.selectProps} />
+                    <cwc-number-input for="number"></cwc-number-input>
                     <cwc-autocomplete-select for="array" props={this.autocompleteProps} />
                     <cwc-autocomplete-select for="data/properties/vegetables" props={this.vegetablesProps} />
                   </cwc-form-generator>
@@ -276,7 +301,7 @@ export class FormGeneratorDocPage {
                 <small><i>Will generate an input type text. Used for type string schema prop.</i></small>
               </li>
               <li>
-                <code>&#9;&lt;cwc-inlineedit-textarea for="string"&gt;&lt;/cwc-inlineedit&gt;</code><br />
+                <code>&#9;&lt;cwc-inlineedit-textarea for="string"&gt;&lt;/cwc-inlineedit-textarea&gt;</code><br />
                 <small><i>Will generate a textarea element. Used for type string schema prop.</i></small>
               </li>
               <li>
@@ -296,11 +321,14 @@ export class FormGeneratorDocPage {
                   <code>
                     const selectProps = JSON.stringify(&#123;
                       &#9;asCombobox: boolean,
-                      &#9;btnLeftPosition: boolean,
-                      &#9;readonly: boolean
+                      &#9;btnLeftPosition: boolean
                     &#125;);
                   </code>
                 </i></small>
+              </li>
+              <li>
+                <code>&#9;&lt;cwc-number-input for="number"&gt;&lt;/cwc-number-input&gt;</code><br />
+                <small><i>Will generate an input type number. Used for type number schema prop.</i></small>
               </li>
               <li>
                 <code>
