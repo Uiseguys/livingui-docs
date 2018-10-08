@@ -18,14 +18,22 @@ export const config: Config = {
     {
       src: 'lib'
     },
-    // {
-    //   src: '../node_modules/@livingui/cwc-tag/dist',
-    //   dest: 'tag-integration'
-    // },
-    // {
-    //   src: '../node_modules/@livingui/cwc-popper/dist',
-    //   dest: 'popper-integration'
-    // },
+    {
+      src: '../node_modules/@livingui/cwc-autocomplete-select/dist',
+      dest: 'autocomplete-select-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-datepicker/dist',
+      dest: 'datepicker-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-dnd/dist',
+      dest: 'dnd-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-dropdown/dist',
+      dest: 'dropdown-integration'
+    },
     {
       src: '../node_modules/@livingui/cwc-form-generator/dist',
       dest: 'form-generator-integration'
@@ -39,52 +47,40 @@ export const config: Config = {
       dest: 'inlineedit-textarea-integration'
     },
     {
-      src: '../node_modules/@livingui/cwc-textarea/dist',
-      dest: 'textarea-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-dropdown/dist',
-      dest: 'dropdown-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-select/dist',
-      dest: 'select-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-datepicker/dist',
-      dest: 'datepicker-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-autocomplete-select/dist',
-      dest: 'autocomplete-select-integration'
-    },
-    {
       src: '../node_modules/@livingui/cwc-input/dist',
       dest: 'input-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-number-input/dist',
-      dest: 'number-input-integration'
-    },
-    {
-      src: '../node_modules/@livingui/cwc-video/dist',
-      dest: 'video-integration'
     },
     {
       src: '../node_modules/@livingui/cwc-moment/dist',
       dest: 'moment-integration'
     },
     {
-      src: '../node_modules/@livingui/cwc-dnd/dist',
-      dest: 'dnd-integration'
+      src: '../node_modules/@livingui/cwc-number-input/dist',
+      dest: 'number-input-integration'
     },
     {
       src: '../node_modules/@livingui/cwc-resolution-info/dist',
       dest: 'resolution-info-integration'
     },
     {
+      src: '../node_modules/@livingui/cwc-select/dist',
+      dest: 'select-integration'
+    },
+    {
       src: '../node_modules/@livingui/cwc-switch/dist',
       dest: 'switch-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-textarea/dist',
+      dest: 'textarea-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-tree/dist',
+      dest: 'tree-integration'
+    },
+    {
+      src: '../node_modules/@livingui/cwc-video/dist',
+      dest: 'video-integration'
     }
   ],
   plugins: [sass()]

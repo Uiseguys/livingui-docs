@@ -23,6 +23,12 @@ export class StencilBsDemoPage {
       isHiden: false
     },
     {
+      componentName: 'tree-page',
+      url: '/tree',
+      title: 'Tree Component',
+      isHiden: false
+    },
+    {
       componentName: 'input-page',
       url: '/input',
       title: 'Input Component',
