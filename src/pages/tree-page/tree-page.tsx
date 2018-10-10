@@ -157,6 +157,11 @@ export class TreePage {
               </tbody>
             </table>
 
+            <p>
+              The template elements, except the first template, which is the main node, must be provided
+              with a 'level' attribute of which value represents a tree node.
+            </p>
+
             <p>The following data prop array is used for this example:</p>
             <p><pre>{JSON.stringify(this.treeData, null, 5)}</pre></p>
           </div>
