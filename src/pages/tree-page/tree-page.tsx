@@ -1,7 +1,8 @@
 import { Component, State } from "@stencil/core";
 
 @Component({
-  tag: "tree-page"
+  tag: "tree-page",
+  shadow: false
 })
 export class TreePage {
   @State() treeData: any;
@@ -99,8 +100,8 @@ export class TreePage {
                   <pre><code>
                     &lt;cwc-tree data=&#123;this.treeData&#125;&gt;<br />
                       &#9;&lt;template-level-1&gt;[[=item.moduleBlockName]]&lt;/template-level-1&gt;<br />
-                      &#9;&lt;template-level-2 key="modules"&gt;[[=item.moduleName]]&lt;/template-level-2&gt;<br />
-                      &#9;&lt;template-level-3 key="events"&gt;[[=item.date]] [[=item.type]]&lt;/template-level-3&gt;<br />
+                      &#9;&lt;template-level-2 level="modules"&gt;[[=item.moduleName]]&lt;/template-level-2&gt;<br />
+                      &#9;&lt;template-level-3 level="events"&gt;[[=item.date]] [[=item.type]]&lt;/template-level-3&gt;<br />
                     &lt;/cwc-tree&gt;
                   </code></pre>
 
@@ -108,8 +109,8 @@ export class TreePage {
                   <h3>Outputs:</h3><br/>
                   <cwc-tree data={this.treeData}>
                     <template-level-1>[[=item.moduleBlockName]]</template-level-1>
-                    <template-level-2 key="modules">[[=item.moduleName]]</template-level-2>
-                    <template-level-3 key="events">[[=item.date]] [[=item.type]]</template-level-3>
+                    <template-level-2 level="modules">[[=item.moduleName]]</template-level-2>
+                    <template-level-3 level="events">[[=item.date]] [[=item.type]]</template-level-3>
                   </cwc-tree>
                   <hr />
                 </div>
